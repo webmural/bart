@@ -1,78 +1,70 @@
-:root {
-  font-size: calc(1em + 2vmin + 3vmax);
-}
-
-:any-link {
-  text-decoration: wavy underline;
-}
-
-:focus {
-  outline-color: currentColor;
-  outline-style: outset;
-  outline-width: thick;
+html {
+  font-family: sans-serif;
+  font-size: max(5ex, 5vmax);
 }
 
 body {
   margin: auto;
-
+  overflow-wrap: anywhere;
 }
 
-figure {
-  margin: auto;
-  padding-block-end: 3rem;
-}
-
-samp {
-  align-items: center;
-  border-radius: 0 3%;
+menu {
+  text-transform: uppercase;
+  border-radius: 20% 0;
   display: flex;
   flex-flow: column;
-  font-size: 2em;
-  font-weight: bold;
-  justify-content: center;
-  min-height: 100vh;
+  list-style: circle;
+  line-height: 1.618;
+  margin: auto;
+  padding: 3ch;
 }
 
-figcaption {
-  font-family: sans-serif;
-  line-height: 1.6;
-  max-width: 11em;
-  margin: auto;
-  padding: 5vmin;
-  padding-bottom: 5rem;
+h1 {
+  align-items: center;
+  border-radius: 0 20%;
+  display: flex;
+  flex-flow: column;
+  font: bold 2em sans-serif;
+  justify-content: center;
+  margin: 0;
+}
+
+h1 a {
+  border-radius: 10%;
+  border: 1ex dashed;
+  padding: 0;
+}
+
+a {
+  display: inline-block;
+  padding: 1ex;
+  font-weight: bold;
+}
+
+blockquote {
+  line-height: 1.618;
+  min-height: 100vh;
+  padding: 1px;
+  text-shadow:
+    0 1em 0,
+    0 2em 0,
+    0 3em 0,
+    0 4em 0,
+    0 5em 0;
 }
 
 b {
-  text-shadow:
-    -.1ex .1ex 0,
-    -.2ex .2ex 0,
-    .3ex -.3ex 0;
+  text-shadow: -1vw -1vh 0;
 }
 
-strong:last-of-type {
-  display: block;
-  text-indent: 12em;
-  transform: rotate(-72deg);
-}
+em { font-style: unset }
+s { text-decoration-style: double }
 
-strong {
-  text-shadow:
-    -.1ex .1ex 0,
-    -.2ex .2ex 0,
-    .3ex -.3ex 0,
-    .3ex .5ex 0,
-    .8ex .8ex 0;
-}
+:any-link { text-decoration: dashed overline }
+:hover { text-decoration: dashed underline }
 
-strong::before {
-  content: "--";
-}
-
-strong::after {
-  content: "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++∞";
-}
-
-::selection {
-  background: rebeccapurple;
-  color: powderblue;
+:focus {
+  outline: thick double;
+  text-decoration-style: double;
+  text-shadow: none;
 }
