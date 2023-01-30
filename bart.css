@@ -9,18 +9,28 @@ body {
 }
 
 menu {
-  text-transform: uppercase;
   border-radius: 20% 0;
+  contain: layout;
   display: flex;
   flex-flow: column;
   list-style: circle;
   line-height: 1.618;
   margin: auto;
   padding: 3ch;
+  text-transform: uppercase;
+}
+
+@media (orientation: portrait) {
+  menu {
+    list-style: none;
+    padding-inline-start: 2ch;
+    padding-inline-end: 1ch;
+  }
 }
 
 footer {
   align-items: center;
+  contain: style;
   display: flex;
   flex-flow: column;
   font-size: 1.618em;
@@ -30,6 +40,7 @@ footer {
 h1 {
   align-items: center;
   border-radius: 0 20%;
+  contain: style;
   display: flex;
   flex-flow: column;
   font: bold 2em sans-serif;
@@ -48,6 +59,7 @@ a {
 }
 
 blockquote {
+  contain: paint;
   font-weight: 600;
   line-height: 1.618;
   min-height: 100vh;
