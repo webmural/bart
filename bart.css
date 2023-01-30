@@ -34,7 +34,7 @@ footer {
   display: flex;
   flex-flow: column;
   font-size: 1.618em;
-  padding-block: 1em;
+  padding-block: 1ex;
 }
 
 h1 {
@@ -59,11 +59,10 @@ a {
 }
 
 blockquote {
-  contain: paint;
+  contain: strict;
   font-weight: 600;
   line-height: 1.618;
   min-height: 100vh;
-  padding: 1ex;
   text-shadow:
     0 1em 0,
     0 2em 0,
